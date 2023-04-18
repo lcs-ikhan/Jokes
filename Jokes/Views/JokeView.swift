@@ -12,6 +12,9 @@ struct JokeView: View {
     // MARK: Stored properties
     @State var punchlineOpacity = 0.0
     
+    // The current joke to display
+    @State var currentJoke = exampleJoke
+    
     // MARK: Computed properties
     var body: some View {
         NavigationView{
