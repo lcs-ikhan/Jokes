@@ -118,7 +118,7 @@ struct JokeView: View {
                     currentJoke = await NetworkService.fetch()
                 }
             }
-            .navigationTitle("Random Jokes")
+            .navigationTitle("Fresh Jokes")
         }
         
     }
