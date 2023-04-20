@@ -10,6 +10,7 @@
 		8504174229EF53E9005F9C04 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504174129EF53E9005F9C04 /* Joke.swift */; };
 		8504174529EF56D4005F9C04 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504174429EF56D4005F9C04 /* NetworkService.swift */; };
 		85169FB029F169B500D0D060 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 85169FAF29F169B500D0D060 /* Blackbird */; };
+		85169FB229F16B1800D0D060 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 85169FB129F16B1800D0D060 /* db.sqlite */; };
 		85EC162A29EF4F3F001E8552 /* JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC162929EF4F3F001E8552 /* JokesApp.swift */; };
 		85EC162E29EF4F44001E8552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC162D29EF4F44001E8552 /* Assets.xcassets */; };
 		85EC163129EF4F44001E8552 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC163029EF4F44001E8552 /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		8504174129EF53E9005F9C04 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		8504174429EF56D4005F9C04 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		85169FB129F16B1800D0D060 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
 		85EC162629EF4F3F001E8552 /* Jokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EC162929EF4F3F001E8552 /* JokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesApp.swift; sourceTree = "<group>"; };
 		85EC162D29EF4F44001E8552 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 		8504174029EF53A9005F9C04 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				85169FB129F16B1800D0D060 /* db.sqlite */,
 				8504174129EF53E9005F9C04 /* Joke.swift */,
 			);
 			path = Model;
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85EC163129EF4F44001E8552 /* Preview Assets.xcassets in Resources */,
+				85169FB229F16B1800D0D060 /* db.sqlite in Resources */,
 				85EC162E29EF4F44001E8552 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
