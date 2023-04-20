@@ -5,11 +5,15 @@
 //  Created by Isaad Khan on 2023-04-18.
 //
 
+import Blackbird
 import SwiftUI
 
 struct JokeView: View {
     
     // MARK: Stored properties
+    
+    // Access the connection to the database (needed to add a new record)
+    @Environment(\.blackbirdDatabase) var db: Blackbird.Database?
     @State var punchlineOpacity = 0.0
     
     // The current joke to display
@@ -75,6 +79,24 @@ struct JokeView: View {
                 .buttonStyle(.borderedProminent)
                 // Create an asynchronous task to be performed as this view appears
                 
+                Button(action: {
+                    Task{
+                        // Write to database
+                        if let currentJoke = currentJoke {
+                            try await db!.transaction { core in
+                                try core.query("INSERT INTO Joke (id, type, setup, punchline) VALUES (?, ?, ?, ?",
+                                               currentJoke.id,
+                                               currentJoke.type,
+                                               currentJoke.setup,
+                                               currentJoke.punchline)
+                            }
+                        }
+                    }
+                }, label: {
+                    Text("Save for later")
+                })
+                .buttonStyle(.borderedProminent)
+                
             }
             .task {
                 currentJoke = await NetworkService.fetch()
@@ -87,6 +109,8 @@ struct JokeView: View {
     struct JokeView_Previews: PreviewProvider {
         static var previews: some View {
             JokeView()
+            //Make the database available to this view in Xcode Previews
+                .environment(\.blackbirdDatabase, AppDatabase.instance)
         }
     }
 
