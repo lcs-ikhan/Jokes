@@ -84,7 +84,7 @@ struct JokeView: View {
                         // Write to database
                         if let currentJoke = currentJoke {
                             try await db!.transaction { core in
-                                try core.query("INSERT INTO Joke (id, type, setup, punchline) VALUES (?, ?, ?, ?",
+                                try core.query("INSERT INTO Joke (id, type, setup, punchline) VALUES (?, ?, ?, ?)",
                                                currentJoke.id,
                                                currentJoke.type,
                                                currentJoke.setup,
