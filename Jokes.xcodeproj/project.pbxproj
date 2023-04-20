@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8504174229EF53E9005F9C04 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504174129EF53E9005F9C04 /* Joke.swift */; };
 		8504174529EF56D4005F9C04 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8504174429EF56D4005F9C04 /* NetworkService.swift */; };
+		85169FB029F169B500D0D060 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 85169FAF29F169B500D0D060 /* Blackbird */; };
 		85EC162A29EF4F3F001E8552 /* JokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC162929EF4F3F001E8552 /* JokesApp.swift */; };
 		85EC162E29EF4F44001E8552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC162D29EF4F44001E8552 /* Assets.xcassets */; };
 		85EC163129EF4F44001E8552 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85EC163029EF4F44001E8552 /* Preview Assets.xcassets */; };
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85169FB029F169B500D0D060 /* Blackbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +115,9 @@
 			dependencies = (
 			);
 			name = Jokes;
+			packageProductDependencies = (
+				85169FAF29F169B500D0D060 /* Blackbird */,
+			);
 			productName = Jokes;
 			productReference = 85EC162629EF4F3F001E8552 /* Jokes.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 85EC161D29EF4F3F001E8552;
+			packageReferences = (
+				85169FAE29F169B500D0D060 /* XCRemoteSwiftPackageReference "Blackbird" */,
+			);
 			productRefGroup = 85EC162729EF4F3F001E8552 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -371,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85169FAE29F169B500D0D060 /* XCRemoteSwiftPackageReference "Blackbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcoarment/Blackbird";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85169FAF29F169B500D0D060 /* Blackbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85169FAE29F169B500D0D060 /* XCRemoteSwiftPackageReference "Blackbird" */;
+			productName = Blackbird;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 85EC161E29EF4F3F001E8552 /* Project object */;
 }
