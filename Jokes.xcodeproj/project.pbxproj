@@ -86,8 +86,8 @@
 		85EC162829EF4F3F001E8552 /* Jokes */ = {
 			isa = PBXGroup;
 			children = (
-				85169FB329F16CD900D0D060 /* Helpers */,
 				85EC162929EF4F3F001E8552 /* JokesApp.swift */,
+				85169FB329F16CD900D0D060 /* Helpers */,
 				8504174329EF5689005F9C04 /* Services */,
 				8504174029EF53A9005F9C04 /* Model */,
 				85EC163729EF4F9F001E8552 /* Views */,
